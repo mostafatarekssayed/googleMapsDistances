@@ -25,6 +25,11 @@ def ShortestPath(request):
         dataframe = pathCalc.find(source_location, target_location, sourceLocation, targetLocation, shortestRouteTitle,
                                   shortestRouteDistance)
 
+    print(len(dataframe['sourceLocation']))
+    print(len(dataframe['targetLocation']))
+    print(len(dataframe['shortestRouteTitle']))
+    print(len(dataframe['shortestRouteDistance']))
+
     df = pd.DataFrame(
         {'Source Location': dataframe['sourceLocation'],
          'Target Location': dataframe['targetLocation'],
