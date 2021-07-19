@@ -4,8 +4,7 @@ import pandas as pd
 
 def find(source_location,destination,sourceLocation,targetLocation,shortestRouteTitle,shortestRouteDistance):
     # targetLocationFilename = 'Target Locations'
-    # driver = webdriver.Chrome("/Users/dinaelhusseiny/Downloads/chromedriver")
-    driver = webdriver.Firefox()
+    driver = webdriver.Chrome("/Users/dinaelhusseiny/Downloads/chromedriver")
     sleep(2)
     driver.get("https://www.google.com/maps/dir/" + source_location)
     minDistance = 10000
