@@ -1,9 +1,10 @@
 from selenium import webdriver
 from time import sleep
+import os
 
 
 def find(source_location,destination,sourceLocation,targetLocation,shortestRouteTitle,shortestRouteDistance):
-    driver = webdriver.Chrome('chromedriver.exe')
+    driver = webdriver.Chrome(os.path.abspath("chromedriver.exe"))
     sleep(2)
     driver.get("https://www.google.com/maps/dir/" + source_location)
     minDistance = 10000
