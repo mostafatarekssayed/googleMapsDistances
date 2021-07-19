@@ -3,7 +3,7 @@ from time import sleep
 
 
 def find(source_location,destination,sourceLocation,targetLocation,shortestRouteTitle,shortestRouteDistance):
-    driver = webdriver.Chrome('/Users/dinaelhusseiny/Downloads/chromedriver')
+    driver = webdriver.Chrome('chromedriver')
     sleep(2)
     driver.get("https://www.google.com/maps/dir/" + source_location)
     minDistance = 10000
