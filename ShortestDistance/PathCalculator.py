@@ -4,7 +4,8 @@ import os
 
 
 def find(source_location,destination,sourceLocation,targetLocation,shortestRouteTitle,shortestRouteDistance):
-    driver = webdriver.Chrome(os.path.abspath("chromedriver.exe"))
+    ROOT_DIR = os.path.dirname(os.path.abspath("chromedriver.exe"))
+    driver = webdriver.Chrome(ROOT_DIR)
     sleep(2)
     driver.get("https://www.google.com/maps/dir/" + source_location)
     minDistance = 10000
