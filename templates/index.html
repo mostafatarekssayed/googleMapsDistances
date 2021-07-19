@@ -24,18 +24,18 @@
 <form method="post" action="{% url 'ShortestPath' %}">
     {% csrf_token %}
 
-  <div class="mb-3">
+      <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Output Filename</label>
+        <input type="text" class="form-control" id="outputFileName" aria-describedby="emailHelp" name="outputFileName">
+  </div>
+
+
+      <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Source Location</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="location">
-
-  </div>
-
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Excel Path</label>
+          <label for="exampleInputPassword1" class="form-label">Destinations csv Path</label>
     <input type="text" class="form-control" id="exampleInputPassword1" name="excel_path" accept="text/csv">
   </div>
-
-
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
