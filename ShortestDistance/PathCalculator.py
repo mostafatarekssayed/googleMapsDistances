@@ -1,11 +1,16 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from time import sleep
 import os
 
 
 def find(source_location,destination,sourceLocation,targetLocation,shortestRouteTitle,shortestRouteDistance):
-    ROOT_DIR = os.path.dirname(os.path.abspath("chromedriver.exe"))
-    driver = webdriver.Chrome(ROOT_DIR)
+    ROOT_DIR = os.path.abspath("chromedriver")
+    WINDOW_SIZE = "1920,1080"
+    chrome_options = Options()
+    # chrome_options.add_argument("--headless")
+    # chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
+    driver = webdriver.Chrome(ROOT_DIR,chrome_options=chrome_options)
     sleep(2)
     driver.get("https://www.google.com/maps/dir/" + source_location)
     minDistance = 10000
