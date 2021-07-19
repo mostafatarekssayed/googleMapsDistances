@@ -6,7 +6,6 @@ def find(source_location,destination,sourceLocation,targetLocation,shortestRoute
     driver = webdriver.Chrome('/Users/dinaelhusseiny/Downloads/chromedriver')
     sleep(2)
     driver.get("https://www.google.com/maps/dir/" + source_location)
-    driver.minimize_window()
     minDistance = 10000
     minIndex = 0
     routeTitleCol = []
